@@ -8,7 +8,7 @@ from slack_bolt.adapter.flask import SlackRequestHandler
 app = App()
 
 
-@app.middleware  # or app.use(log_request)
+#@app.middleware  # or app.use(log_request)
 def log_request(logger, body, next):
     logger.debug(body)
     return next()
